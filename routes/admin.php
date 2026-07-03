@@ -1,0 +1,8 @@
+<?php
+
+use App\Livewire\Admin\Dashboard;
+use Illuminate\Support\Facades\Route;
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    Route::get('/dashboard', Dashboard::class);
+});
